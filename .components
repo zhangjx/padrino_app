@@ -1,0 +1,9 @@
+---
+:orm: sequel
+:test: minitest
+:mock: mocha
+:script: none
+:renderer: erb
+:stylesheet: none
+:namespace: PadrinoApp
+:migration_format: number
