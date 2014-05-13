@@ -17,6 +17,7 @@ gem 'oj'
 gem 'rake'
 
 # Component requirements
+gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'erubis', '~> 2.7.0'
 gem 'mysql2'
 gem 'sequel'
