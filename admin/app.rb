@@ -1,6 +1,5 @@
 module PadrinoApp
   class Admin < Padrino::Application
-    register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
     register Padrino::Admin::AccessControl
@@ -22,7 +21,7 @@ module PadrinoApp
     #
 
     set :admin_model, 'Account'
-    set :login_page,  '/admin/sessions/new'
+    set :login_page,  '/sessions/new'
 
     enable  :sessions
     disable :store_location
@@ -33,8 +32,8 @@ module PadrinoApp
     end
 
     access_control.roles_for :admin do |role|
-    role.project_module :posts, '/posts'
-    role.project_module :accounts, '/accounts'
+      role.project_module :posts, '/posts'
+      role.project_module :accounts, '/accounts'
     end
 
     # Custom error management 

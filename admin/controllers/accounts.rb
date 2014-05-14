@@ -76,7 +76,7 @@ PadrinoApp::Admin.controllers :accounts do
       flash[:error] = pat(:destroy_many_error, :model => 'account')
       redirect(url(:accounts, :index))
     end
-    ids = params[:account_ids].split(',').map(&:strip).map(&:to_i)
+    ids = params[:account_ids].split(',').map(&:strip)
     accounts = Account.where(:id => ids)
     
     if accounts.include? current_account

@@ -76,7 +76,7 @@ PadrinoApp::Admin.controllers :posts do
       flash[:error] = pat(:destroy_many_error, :model => 'post')
       redirect(url(:posts, :index))
     end
-    ids = params[:post_ids].split(',').map(&:strip).map(&:to_i)
+    ids = params[:post_ids].split(',').map(&:strip)
     posts = Post.where(:id => ids)
     
     if posts.destroy

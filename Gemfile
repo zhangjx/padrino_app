@@ -17,7 +17,7 @@ gem 'oj'
 gem 'rake'
 
 # Component requirements
-gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'bcrypt'
 gem 'erubis', '~> 2.7.0'
 gem 'mysql2'
 gem 'sequel'
@@ -30,7 +30,7 @@ gem 'rack-cors', :require => 'rack/cors'
 # Test requirements
 group :test do
   gem 'mocha'
-  gem 'minitest', '~>2.6.0', :require => 'minitest/autorun'
+  gem 'minitest', :require => 'minitest/autorun'
   gem 'rack-test', :require => 'rack/test'
 end
 
@@ -42,12 +42,12 @@ group :development, :test do
 end
 
 # Padrino Stable Gem
-gem 'padrino', '0.11.2'
+gem 'padrino', '0.12.2'
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
 
 # Or Individual Gems
-# %w(core gen helpers cache mailer admin).each do |g|
-#   gem 'padrino-' + g, '0.11.2'
+# %w(core support gen helpers cache mailer admin).each do |g|
+#   gem 'padrino-' + g, '0.12.2'
 # end

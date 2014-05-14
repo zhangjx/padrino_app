@@ -1,8 +1,8 @@
-PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
+RACK_ENV = 'test' unless defined?(RACK_ENV)
 require File.expand_path('../../config/boot', __FILE__)
 
-class MiniTest::Unit::TestCase
-  #include Mocha::API
+class MiniTest::Spec
+  include Mocha::API
   include Rack::Test::Methods
 
   # You can use this method to custom specify a Rack app
@@ -14,7 +14,7 @@ class MiniTest::Unit::TestCase
   #     set :foo, :bar
   #   end
   #
-  def app(app = nil &blk)
+  def app(app = nil, &blk)
     @app ||= block_given? ? app.instance_eval(&blk) : app
     @app ||= Padrino.application
   end
