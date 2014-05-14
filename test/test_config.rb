@@ -1,5 +1,6 @@
 RACK_ENV = 'test' unless defined?(RACK_ENV)
 require File.expand_path('../../config/boot', __FILE__)
+require 'mocha/api'
 
 class MiniTest::Spec
   include Mocha::API
